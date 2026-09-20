@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#f7f8fa">
+  <title>Reddit Marketing Learning Feed</title>
+  <link rel="stylesheet" href="/styles.css"><script type="module" src="/app.js"></script>
+</head>
+<body>
+  <main>
+    <header><p class="eyebrow">PERSONAL · READ-ONLY · NON-COMMERCIAL</p><h1>Marketing Learning Feed</h1>
+      <p class="intro">Useful Reddit discussions about advertising, measurement, tools and workflows. Read the full conversation on Reddit.</p></header>
+    <section class="notice" aria-live="polite"><p id="service-status">Checking configuration…</p><p id="message" role="status"></p></section>
+    <section id="unlock-panel" class="panel" hidden>
+      <h2>Your private feed</h2><p>Unlock with your REFRESH_KEY. It is not saved in browser storage; an encrypted-transport, signed session cookie keeps you signed in for seven days.</p>
+      <form id="unlock-form"><label for="key">Private access key</label><div class="unlock-row"><input type="password" id="key" name="key" autocomplete="off" minlength="32" maxlength="256" required><button type="submit" id="unlock">Unlock</button></div></form>
+    </section>
+    <section id="feed-panel" hidden>
+      <div class="toolbar"><div><h2>Your reading list</h2><p id="updated" class="muted"></p></div><div class="actions"><button id="refresh" type="button">Refresh Reddit</button><button id="logout" class="secondary" type="button">Lock</button></div></div>
+      <p class="muted">Daily refresh: 09:00 Beijing. Manual refresh has a 15-minute cooldown.</p>
+      <form id="filters" class="filters" role="search">
+        <label class="search">Search titles and excerpts<input id="search" type="search" maxlength="200" placeholder="Search your reading list…" autocomplete="off"></label>
+        <label>Sort<select id="sort"><option value="newest">Newest</option><option value="score">Highest score</option><option value="comments">Most comments</option><option value="quality">Learning relevance</option></select></label>
+        <label>Time window<select id="days"><option value="1">Last 24 hours</option><option value="3">Last 3 days</option><option value="7">Last 7 days</option><option value="30" selected>Last 30 days</option></select></label>
+        <details id="more-filters" class="filter-details"><summary>Category, keyword &amp; subreddit</summary><div class="filter-grid">
+        <label>Category<select id="category"><option value="">All categories</option></select></label>
+        <label>Keyword<select id="keyword"><option value="">All keywords</option></select></label>
+        <label>Subreddit<select id="subreddit"><option value="">All subreddits</option></select></label>
+        </div></details>
+      </form>
+      <div class="list-heading"><p id="count" class="muted" aria-live="polite"></p><button type="button" id="clear-filters" class="text-button">Reset filters</button></div>
+      <section id="posts" aria-label="Reddit posts"></section><p id="empty" class="panel muted" hidden></p>
+      <button type="button" id="more" class="secondary" hidden>Show more</button>
+    </section>
+    <footer>Private learning, not a content archive. Public posts only. Cached content is rechecked daily and expires within 48 hours without successful verification. No public feed, tracking or AI training. Not affiliated with Reddit.</footer>
+    <noscript><p>This lightweight dashboard needs JavaScript. No Reddit credentials are sent to your browser.</p></noscript>
+  </main>
+</body>
+</html>

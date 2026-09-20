@@ -12,3 +12,15 @@ dist/
 playwright-report/
 test-results/
 
+# Machine-local evidence, backups and operator helpers are not public source.
+.local/
+acceptance/
+evidence/
+ACCEPTANCE_CODEX_*.md
+BASELINE.md
+SHA256SUMS.txt
+scripts/acceptance-http.ps1
+scripts/acceptance-rotation.ps1
+scripts/capture-cloud-cpu.mjs
+scripts/configure-refresh-key.ps1
+__pycache__/

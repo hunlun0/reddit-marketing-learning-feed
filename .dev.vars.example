@@ -1,0 +1,6 @@
+# Copy to .dev.vars (ignored by Git). Empty is a supported, non-fetching state.
+REFRESH_KEY=
+REDDIT_CLIENT_ID=
+REDDIT_CLIENT_SECRET=
+# Optional: for a user-authorized read-only OAuth flow.
+REDDIT_REFRESH_TOKEN=

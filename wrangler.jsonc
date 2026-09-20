@@ -1,0 +1,38 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "reddit-marketing-learning-feed",
+	"main": "src/index.js",
+	"compatibility_date": "2026-09-01",
+	"assets": {
+		"directory": "./public",
+		"binding": "ASSETS",
+		"run_worker_first": true
+	},
+	"observability": {
+		"enabled": true,
+		"logs": {
+			"enabled": true,
+			"invocation_logs": false
+		}
+	},
+	"triggers": {
+		// UTC: 01:00 = 09:00 Beijing (UTC+8), no daylight-saving adjustment.
+		"crons": [
+			"0 1 * * *"
+		]
+	},
+	"vars": {
+		// Set your REAL contact username before enabling API access. This is not a secret.
+		"REDDIT_USER_AGENT": "web:reddit-marketing-learning-feed:v1.0.1 (by /u/YOUR_REDDIT_USERNAME)",
+		"RETENTION_DAYS": "30",
+		"MAX_POSTS": "400"
+	},
+	"kv_namespaces": [
+		{
+			"binding": "CACHE",
+			"id": "679c45510b064c0e996d2dabd5862768"
+		}
+	]
+	// Deliberately no fake namespace ID. Site works before KV/API setup.
+	// Create/bind a namespace named CACHE using the README instructions.
+}
