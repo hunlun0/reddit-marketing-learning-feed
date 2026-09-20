@@ -23,7 +23,7 @@
 	},
 	"vars": {
 		// Set your REAL contact username before enabling API access. This is not a secret.
-		"REDDIT_USER_AGENT": "web:reddit-marketing-learning-feed:v1.0.1 (by /u/YOUR_REDDIT_USERNAME)",
+		"REDDIT_USER_AGENT": "web:reddit-marketing-learning-feed:v1.0.1 (by /u/Low_Log2296)",
 		"RETENTION_DAYS": "30",
 		"MAX_POSTS": "400"
 	},
